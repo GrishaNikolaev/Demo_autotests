@@ -11,8 +11,8 @@ def browser():
     yield browser
 
 def test_open_Forgote_password(browser):
-    browser.get('https://test.hu-li.com/en/auth/login')
-    forgot_password = browser.find_element(By.LINK_TEXT, 'Forgot password?')
+    browser.get('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    forgot_password = browser.find_element(By.LINK_TEXT, 'Forgot your password?')
     forgot_password.click()
     title = browser.find_element(By.CSS_SELECTOR, 'h1')
-    assert title.text == 'Forgot password?'
+    assert title.text == 'Reset Password'
